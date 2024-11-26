@@ -1,0 +1,56 @@
+/* Style all links within each section with different colors using descendant combinators */
+nav section a {
+    color: gray;  /* Default color for links inside sections */
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Style links in the Home section */
+  nav .home a {
+    color: blue;  /* Blue color for links in the 'Home' section */
+  }
+  
+  /* Style links in the About section */
+  nav .about a {
+    color: green;  /* Green color for links in the 'About' section */
+  }
+  
+  /* Style links in the Contact section */
+  nav .contact a {
+    color: orange;  /* Orange color for links in the 'Contact' section */
+  }
+  
+  /* Use a child combinator to style only direct child links within each section */
+  nav .home > a {
+    font-weight: bold;  /* Bold style for direct links under the 'Home' section */
+  }
+  
+  nav .about > a {
+    font-weight: bold;  /* Bold style for direct links under the 'About' section */
+  }
+  
+  nav .contact > a {
+    font-weight: bold;  /* Bold style for direct links under the 'Contact' section */
+  }
+  
+  /* Hover and active styles for dynamic interaction */
+  nav a:hover {
+    color: red;  /* Red color on hover */
+  }
+  
+  nav a:active {
+    color: purple;  /* Purple color on click */
+  }
+  
+  /* Specificity: Style links with href starting with https using an attribute selector */
+  nav a[href^="https"] {
+    color: darkblue !important;  /* Overriding all other styles for links with 'https' */
+    font-weight: normal;  /* Ensure that https links are not bold */
+  }
+  
+  nav div > a {
+    font-style: italic;  
+  }
+  
+  
